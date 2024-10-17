@@ -2,19 +2,7 @@
 #include <dt-bindings/zmk/keys.h>
 
 / {
-    combos {
-        compatible = "zmk,combos";
-
-        bluetooth {
-            bindings = <&mo 0>;
-            key-positions = <41 36>;
-        };
-
-        bt2 {
-            bindings = <&mo 0>;
-            key-positions = <48 53>;
-        };
-    };
+    combos { compatible = "zmk,combos"; };
 
     behaviors {
         hml: hml {
@@ -43,6 +31,15 @@
             flavor = "balanced";
             hold-trigger-key-positions = <0 1 2 3 4 5 12 13 14 15 16 17 24 25 26 27 28 29 36 37 38 39 40 41>;
             hold-trigger-on-release;
+        };
+    };
+
+    macros {
+        phimmeomeo: phimmeomeo {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&none &kp P &kp H &kp I &kp M &kp M &kp E &kp O &kp M &kp E &kp O &kp DOT &kp C &kp O &kp M>;
+            label = "PHIMMEOMEO";
         };
     };
 
@@ -75,11 +72,11 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&trans  &kp F1     &kp F2     &kp F3  &kp F4  &kp F5           &kp F6     &kp F7          &kp F8          &kp F9     &kp F10       &kp F11
-&trans  &trans     &trans     &trans  &trans  &kp F12          &trans     &trans          &kp UP_ARROW    &trans     &trans        &kp F12
-&trans  &trans     &trans     &trans  &trans  &trans           &trans     &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT  &kp UP_ARROW  &trans
-&trans  &kp GRAVE  &kp EQUAL  &trans  &trans  &trans           &kp SLASH  &trans          &trans          &trans     &trans        &kp BACKSLASH
-                              &trans  &trans  &kp BACKSPACE    &trans     &trans          &trans
+&trans  &kp F1     &kp F2     &kp F3  &kp F4  &kp F5         &kp F6     &kp F7          &kp F8          &kp F9     &kp F10  &kp F11
+&trans  &trans     &trans     &trans  &trans  &kp F12        &trans     &trans          &kp UP_ARROW    &trans     &trans   &kp F12
+&trans  &trans     &trans     &trans  &trans  &trans         &trans     &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT  &trans   &trans
+&trans  &kp GRAVE  &kp EQUAL  &trans  &trans  &trans         &kp SLASH  &trans          &trans          &trans     &trans   &kp BACKSLASH
+                              &trans  &trans  &phimmeomeo    &trans     &trans          &trans
             >;
         };
     };
