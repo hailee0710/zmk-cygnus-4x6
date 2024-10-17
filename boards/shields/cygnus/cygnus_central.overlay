@@ -1,5 +1,3 @@
-#include "cygnus.dtsi" // Notice that the main dtsi files are included in the overlay.
-
 / {
     chosen {
         zmk,kscan = &mock_kscan;
