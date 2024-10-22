@@ -5,6 +5,7 @@
     chosen {
         zmk,kscan = &mock_kscan;
         zephyr,display = &oled;
+        zmk,physical-layout = &cygnus_physical_layout;
     };
 
     default_transform: keymap_transform_0 {
