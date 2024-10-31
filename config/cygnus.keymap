@@ -1,6 +1,14 @@
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
 
+&mt {
+    flavor = "balanced";
+    hold-trigger-on-release;
+    tapping-term-ms = <400>;
+    quick-tap-ms = <250>;
+    require-prior-idle-ms = <200>;
+};
+
 / {
     combos { compatible = "zmk,combos"; };
 
@@ -38,8 +46,10 @@
         phimmeomeo: phimmeomeo {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&none &kp P &kp H &kp I &kp M &kp M &kp E &kp O &kp M &kp E &kp O &kp DOT &kp C &kp O &kp M>;
+            bindings = <&kp P &kp H &kp I &kp M &kp M &kp E &kp O &kp M &kp E &kp O &kp DOT &kp C &kp O &kp M>;
             label = "PHIMMEOMEO";
+            wait-ms = <5>;
+            tap-ms = <10>;
         };
     };
 
