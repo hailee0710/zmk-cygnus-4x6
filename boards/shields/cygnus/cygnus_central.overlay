@@ -31,6 +31,7 @@ RC(3,0) RC(3,1) RC(3,2) RC(3,3) RC(3,4) RC(3,5)     RC(3,6) RC(3,7) RC(3,8) RC(3
         columns = <0>;
         rows = <0>;
         events = <0>;
+        wakeup-source;
     };
 
     cygnus_physical_layout: cygnus_physical_layout {
