@@ -9,8 +9,8 @@
 
     default_transform: keymap_transform_0 {
         compatible = "zmk,matrix-transform";
-        columns = <17>;
-        rows = <4>;
+        columns = <13>;
+        rows = <5>;
 // | SW6  | SW5  | SW4  | SW3  | SW2  | SW1  |      | SW1  | SW2  | SW3  | SW4  | SW5  | SW6  |
 // | SW12 | SW11 | SW10 | SW9  | SW8  | SW7  |      | SW7  | SW8  | SW9  | SW10 | SW11 | SW12 |
 // | SW18 | SW17 | SW16 | SW15 | SW14 | SW13 |      | SW13 | SW14 | SW15 | SW16 | SW17 | SW18 |
@@ -47,7 +47,7 @@ RC(3,0) RC(3,1) RC(3,2) RC(3,3) RC(3,4) RC(3,5)     RC(3,6) RC(3,7) RC(3,8) RC(3
         transform = <&default_transform>;
         kscan = <&kscan0>;
 
-         keys  //                     w   h    x    y     rot    rx    ry
+        keys  //                     w   h    x    y     rot    rx    ry
             = <&key_physical_attrs 100 100    0   38       0     0     0>
             , <&key_physical_attrs 100 100  100   38       0     0     0>
             , <&key_physical_attrs 100 100  200   12       0     0     0>
@@ -60,7 +60,7 @@ RC(3,0) RC(3,1) RC(3,2) RC(3,3) RC(3,4) RC(3,5)     RC(3,6) RC(3,7) RC(3,8) RC(3
             , <&key_physical_attrs 100 100 1200   12       0     0     0>
             , <&key_physical_attrs 100 100 1300   38       0     0     0>
             , <&key_physical_attrs 100 100 1400   38       0     0     0>
-            , <&key_physical_attrs 100 100 1200  500       0     0     0>
+            , <&key_physical_attrs 100 100 1500   38       0     0     0>
             , <&key_physical_attrs 100 100    0  138       0     0     0>
             , <&key_physical_attrs 100 100  100  138       0     0     0>
             , <&key_physical_attrs 100 100  200  112       0     0     0>
@@ -73,7 +73,7 @@ RC(3,0) RC(3,1) RC(3,2) RC(3,3) RC(3,4) RC(3,5)     RC(3,6) RC(3,7) RC(3,8) RC(3
             , <&key_physical_attrs 100 100 1200  112       0     0     0>
             , <&key_physical_attrs 100 100 1300  138       0     0     0>
             , <&key_physical_attrs 100 100 1400  138       0     0     0>
-            , <&key_physical_attrs 100 100 1100  600       0     0     0>
+            , <&key_physical_attrs 100 100 1500  138       0     0     0>
             , <&key_physical_attrs 100 100    0  238       0     0     0>
             , <&key_physical_attrs 100 100  100  238       0     0     0>
             , <&key_physical_attrs 100 100  200  212       0     0     0>
@@ -86,7 +86,7 @@ RC(3,0) RC(3,1) RC(3,2) RC(3,3) RC(3,4) RC(3,5)     RC(3,6) RC(3,7) RC(3,8) RC(3
             , <&key_physical_attrs 100 100 1200  212       0     0     0>
             , <&key_physical_attrs 100 100 1300  238       0     0     0>
             , <&key_physical_attrs 100 100 1400  238       0     0     0>
-            , <&key_physical_attrs 100 100 1300  600       0     0     0>
+            , <&key_physical_attrs 100 100 1500  238       0     0     0>
             , <&key_physical_attrs 100 100    0  338       0     0     0>
             , <&key_physical_attrs 100 100  100  338       0     0     0>
             , <&key_physical_attrs 100 100  200  312       0     0     0>
@@ -99,13 +99,13 @@ RC(3,0) RC(3,1) RC(3,2) RC(3,3) RC(3,4) RC(3,5)     RC(3,6) RC(3,7) RC(3,8) RC(3
             , <&key_physical_attrs 100 100 1200  312       0     0     0>
             , <&key_physical_attrs 100 100 1300  338       0     0     0>
             , <&key_physical_attrs 100 100 1400  338       0     0     0>
-            , <&key_physical_attrs 100 100 1200  700       0     0     0>
+            , <&key_physical_attrs 100 100 1500  338       0     0     0>
             , <&key_physical_attrs 100 100  390  412    3000     0     0>
             , <&key_physical_attrs 100 100  310  440    3000   398   790>
             , <&key_physical_attrs 100 150  415  390    3000   398   790>
             , <&key_physical_attrs 100 150  992  390 (-3000)  1102   790>
             , <&key_physical_attrs 100 100 1097  440 (-3000)  1102   790>
-            , <&key_physical_attrs 100 100 1200  600       0     0     0>
+            , <&key_physical_attrs 100 100 1500  440       0     0     0>
             ;
     };
 };
