@@ -5,6 +5,8 @@
 };
 
 &kscan0 {
+    compatible = "zmk,kscan-gpio-matrix";
+    wakeup-source;
     col-gpios
         = <&pro_micro 14 GPIO_ACTIVE_HIGH> // col6 in the schematic
         , <&pro_micro 15 GPIO_ACTIVE_HIGH> // col5 in the schematic
@@ -15,3 +17,7 @@
         , <&pro_micro 0 GPIO_ACTIVE_HIGH>
         ;
 };
+
+&cygnus_physical_layout {
+    kscan = <&kscan0>;
+}

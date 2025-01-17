@@ -1,6 +1,8 @@
 #include "cygnus.dtsi" // Notice that the main dtsi files are included in the overlay.
 
 &kscan0 {
+    compatible = "zmk,kscan-gpio-matrix";
+    wakeup-source;
     col-gpios
         = <&pro_micro 21 GPIO_ACTIVE_HIGH> // col1 in the schematic
         , <&pro_micro 20 GPIO_ACTIVE_HIGH> // col2 in the schematic
@@ -10,3 +12,7 @@
         , <&pro_micro 14 GPIO_ACTIVE_HIGH> // col6 in the schematic
         ;
 };
+
+&cygnus_physical_layout {
+    kscan = <&kscan0>;
+}
