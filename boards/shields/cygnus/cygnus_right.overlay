@@ -20,4 +20,4 @@
 
 &cygnus_physical_layout {
     kscan = <&kscan0>;
-}
+};
